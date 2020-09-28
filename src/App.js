@@ -1,9 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { JumbotronContainer } from './containers/jumbotron';
 
-export const App = () => {
-  return (
-    <p>Hello</p>
-  )
-}
+export const App = () => <JumbotronContainer />;
 
 export default App;
