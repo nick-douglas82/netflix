@@ -34,9 +34,11 @@ export const Link = styled.p`
   margin-right: 30px;
   font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
   cursor: pointer;
+
   &:hover {
     font-weight: bold;
   }
+
   &:last-of-type {
     margin-right: 0;
   }
@@ -158,6 +160,7 @@ export const Feature = styled(Container)`
   flex-direction: column;
   align-items: normal;
   width: 50%;
+
   @media (max-width: 1100px) {
     display: none;
   }
