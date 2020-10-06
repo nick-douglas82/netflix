@@ -11,11 +11,13 @@ import {
 
 const ToggleContext = createContext();
 
-const Accordion = ({ children, ...restProps }) => (
-  <Container {...restProps}>
-    <Inner>{children}</Inner>
-  </Container>
-);
+export default function Accordion({ children, ...restProps }) {
+  return (
+    <Container {...restProps}>
+      <Inner>{children}</Inner>
+    </Container>
+  );
+}
 
 Accordion.Title = function AccordionTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
@@ -53,5 +55,3 @@ Accordion.Body = function AccordionBody({ children, ...restProps }) {
 
   return toggleShow ? <Body {...restProps}>{children}</Body> : null;
 };
-
-export default Accordion;
